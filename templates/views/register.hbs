@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+
+<body>
+
+    {{>navbar}}
+    <div class="container col-md-3">
+        <form class="row g-2" action="/register" method="POST">
+
+            <div class="col-md-12">
+                <label for="firstName" class="form-label">First Name</label>
+                <input name="firstname" type="text" class="form-control" id="firstName">
+            </div>
+
+            <div class="col-md-12">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input name="lastname" type="text" class="form-control" id="lastName">
+            </div>
+
+            <div class="col-md-12">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input name="email" type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-12">
+                <div class="form-check form-check-inline">
+                    <input name="gender" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="male">
+                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input name="gender" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="female">
+                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <label for="inputAddress" class="form-label">Phone</label>
+                <input name="mobile" type="number" maxlength="10" minlength="10" class="form-control" id="inputAddress"
+                    placeholder="Phone number">
+            </div>
+            <div class="col-6">
+                <label for="inputAddress2" class="form-label">Age</label>
+                <input name="age" type="number" class="form-control" id="inputAddress2" placeholder="Write your age">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Password</label>
+                <input name="pass" type="password" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-6">
+                <label for="cnfmPassword" class="form-label">Confirm Password</label>
+                <input name="cnfmpass" type="password" class="form-control" id="cnfmPassword">
+
+            </div>
+
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary btnRegister">Sign in</button>
+            </div>
+        </form>
+    </div>
+    {{>footer}}
+</body>
+
+</html>
