@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
+
 const userSchema = new mongoose.Schema({
     firstname: {
         type: String,
@@ -69,7 +70,7 @@ userSchema.pre("save", async function (next) {    //yaha save event hone se pehl
         // console.log(`the current password is ${this.password}`)
         // this.password = await bcrypt.hash(this.password,10);
         // console.log(`the hashed password is ${this.password}`)
-        if (this.isModified("password")) {
+        if (this.isModified("password")) { //current document ka password modified hai ya ni
             // console.log(`the current password is ${this.password}`)
             this.password = await bcrypt.hash(this.password, 10);
             // console.log(`the hashed password is ${this.password}`)
